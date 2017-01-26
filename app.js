@@ -25,7 +25,8 @@ app.get('/', function(req, res){
 });
 
 app.post('/collect', function(req, res){
-
+	res.send('foo');
+	console.log(req.body);
 	var channel = {
 		id: 	req.body.channel_id,
 		name: 	req.body.channel_name
