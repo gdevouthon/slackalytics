@@ -88,6 +88,7 @@ app.post('/', function(req, res){
 	console.log(JSON.stringify(data));
 	console.log(req.body);
 	//Make Post Request	
+	console.log(qs.stringify(data));
 	request.post("https://www.google-analytics.com/collect?" + qs.stringify(data), 
 		function(error, resp, body){
 		console.log(error);
